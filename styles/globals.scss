@@ -1,3 +1,5 @@
+@import 'variables';
+
 html,
 body {
   padding: 0;
@@ -6,21 +8,53 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+main {
+  width: 1440px;
+}
+
 a {
   color: inherit;
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
+.navbar-collapse{
+  background-color: $background_color;
+  border-radius: 8px;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+.nav-item{
+  align-self: end;
+  margin-right: 48px;
+
+  @media(max-width: $desktop_width){
+  
+    margin-right: 20px;
   }
+
+  @media(max-width: $tablet_width){
+    align-self: center;
+  }
+}
+
+.nav-link {
+  color: $secondary_text_color !important;
+  font-family: 'Poppins';
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+
+}
+
+
+@media (prefers-color-scheme: light) {
+  html {
+    color-scheme: light;
+  }
+
   body {
-    color: white;
-    background: black;
+    color: black;
+    background: $background_color;
   }
 }
