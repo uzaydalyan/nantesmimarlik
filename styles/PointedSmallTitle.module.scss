@@ -1,0 +1,28 @@
+@import 'variables';
+
+.main {
+
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+
+    .circle {
+        height: 13px;
+        width: 14px;
+        background-color: $primary_color;
+        border-radius: 50%;
+        display: inline-block;
+    }
+
+    .title {
+
+        font-family: $navbar_font;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 20px;
+        letter-spacing: 0.1em;
+        text-align: left;
+        color: $primary_color;
+    }
+}

@@ -12,15 +12,162 @@
 
 .main {
   width: 100%;
-  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  justify-items: center;
 }
 
-.hero{
+.hero {
   width: 100%;
+  margin-top: 80px;
+
+  .hero_texts {
+
+    width: $desktop_width;
+    margin: 0 auto;
+    margin-bottom: 75px;
+
+    .title {
+      font-family: $title_font;
+      font-size: 72px;
+      font-weight: 500;
+      line-height: 96px;
+      letter-spacing: -0.025em;
+      text-align: center;
+      margin-bottom: 24px;
+      color: $secondary_text_color;
+    }
+
+    .description {
+      font-family: $main_font;
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 32px;
+      letter-spacing: 0em;
+      text-align: center;
+      color: $primary_text_color;
+      max-width: 800px;
+      margin: 0 auto;
+
+    }
+  }
+
+  .image {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    object-fit: cover;
+  }
+
+}
+
+.about {
+
+  display: flex;
+  width: $desktop_width;
+  height: 816px;
+  padding: 128px 0px;
+  flex-direction: row;
+  gap: 32px;
+
+  .about_texts {
+    align-self: center;
+    display: grid;
+    grid-template-rows: 1fr;
+    row-gap: 24px;
+    justify-items: start;
+
+    .about_title {
+      font-family: $title_font;
+      color: $secondary_text_color;
+      font-size: 60px;
+      font-weight: 400;
+      line-height: 72px;
+      letter-spacing: -0.025em;
+      text-align: left;
+    }
+
+    .about_description {
+      font-family: $main_font;
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 32px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: $primary_text_color;
+    }
+  }
+
+  .about_images {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+
+    .about_image1 {
+      align-self: flex-start;
+    }
+
+    .about_image2 {
+      align-self: flex-end;
+    }
+  }
 
 
+}
+
+@media(max-width: $desktop_width) {
+
+  .hero .hero_texts {
+    width: $tablet_width;
+  }
+
+  .about {
+    width: $tablet_width;
+    flex-direction: column;
+    height: unset;
+
+    .about_images {
+      height: 651px;
+
+      img {
+        width: 325px;
+        height: 558px;
+      }
+    }
+  }
+}
+
+
+@media(max-width: $tablet_width) {
+
+  .hero .hero_texts {
+    width: $mobile_width;
+  }
+
+  .about {
+    width: $mobile_width;
+    padding: 48px 0px;
+
+    .about_title {
+      font-size: 36px;
+      line-height: 48px;
+      letter-spacing: 0px;
+    }
+
+    .about_description {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    .about_images {
+      height: 317px;
+
+      img {
+        width: 158px;
+        height: 271px;
+      }
+    }
+  }
 }
