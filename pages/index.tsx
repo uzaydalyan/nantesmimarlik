@@ -42,7 +42,7 @@ const Home: NextPage = () => {
         <div className={styles.about} id="about">
           <div className={styles.about_texts}>
             <PointedSmallTitle title='Hakkımızda' />
-            <h1 className={styles.about_title}>Bizi Anlatan 3 Değer:<br/><h2><br/>Güven & Konfor  & Estetik</h2></h1>
+            <div className={styles.about_title}>Bizi Anlatan 3 Değer:<br/><h2><br/>Güven & Konfor  & Estetik</h2></div>
             <p className={styles.about_description}>Mimar Tolga Bayramoğlu önderliğinde kurulan markamız; Mimarlık, İç Mimarlık, İnşaat, Cephe Tasarımı alanlarında hizmet vermektedir.
               Tolga Bayramoğlu, 2022 yılında Bahçeşehir Üniversitesi Mimarlık Fakültesi İngilizce Program’dan mezun olmuştur. Yüksek konut projelerinde şantiye alanında, özel konut ve ofis projelerinde iç mimarlık uygulamaları alanında deneyime sahip olması ile beraber mermer, kaplama ve doğal taş uygulamaları alanında da çalışmıştır.
               Sektörde kazandığı deneyimleri uygulamak adına Hatay ve İstanbul’da hizmet vermektedir.<br /><br />NANTES Mimarlık, fonksiyonel ve estetik tasarımlarımızla müşterilerimizin hayallerini gerçeğe dönüştürmek için varız. Mimari tasarımın gücünü kullanarak, insanların yaşam alanlarındaki deneyimlerini zenginleştirmek, toplumumuza katkıda bulunmak ve çevreye saygı göstermek için çalışıyoruz.</p>
