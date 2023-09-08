@@ -19,3 +19,48 @@ $desktop_width: 1216px;
 $tablet_width: 688px;
 $mobile_width: 335px;
 
+@mixin h1_desktop {
+    font-family: $title_font;
+    color: $secondary_text_color;
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 72px;
+    letter-spacing: -0.025em;
+    margin: 0;
+}
+
+@mixin h1_mobile {
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: 0px;
+}
+
+@mixin h2_desktop {
+    font-family: $title_font;
+    color: $secondary_text_color;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 48px;
+    letter-spacing: 0px;
+    margin: 0;
+}
+
+@mixin h2_mobile {
+    font-size: 30px;
+    line-height: 40px;
+}
+
+@mixin p_desktop {
+    font-family: $main_font;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 32px;
+    letter-spacing: 0em;
+    color: $primary_text_color;
+    margin: 0;
+}
+
+@mixin p_mobile {
+    font-size: 16px;
+    line-height: 24px;
+}

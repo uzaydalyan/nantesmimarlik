@@ -1,6 +1,6 @@
 import styles from '../styles/PointedSmallTitle.module.scss';
 
-const PointedSmallTitle = ({ title, className }: { title: string, className: string }) => {
+const PointedSmallTitle = ({ title, className = "" }: { title: string, className?: string }) => {
     
     
     return (

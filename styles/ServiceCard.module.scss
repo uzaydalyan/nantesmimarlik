@@ -1,0 +1,45 @@
+@import 'variables';
+
+.main{
+    display: grid;
+    width: 100%;
+    gap: 16px;
+    padding: 40px;
+    border: 1px solid #E6D8CC;
+    border-radius: 12px;
+    height: 368px;
+    align-content: end;
+
+    .image{
+        height: 120px;
+    }
+
+    .title{
+        @include h2_desktop;
+        align-self: end;
+    }
+
+    .description{
+        @include p_desktop;
+        align-self: end;
+    }
+}
+
+@media(max-width: $desktop_width){
+
+    .main{
+        height: 336px;
+    }
+}
+
+@media(max-width: $tablet_width){
+
+    .main{
+        height: 320px;
+        padding: 32px;
+
+        .image{
+            height: 64px;
+        }
+    }
+}

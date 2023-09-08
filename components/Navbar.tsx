@@ -12,13 +12,13 @@ const Navbar = () => {
                     <div className="navbar-collapse collapse" id="collapseNavbar">
                         <ul className="navbar-nav ms-auto">
                             <li className="nav-item active">
-                                <a className="nav-link" href="about">Hakkında</a>
+                                <a className="nav-link" href="#about">Hakkında</a>
                             </li>
                             <li className="nav-item active">
-                                <a className="nav-link" href="projects">Projeler</a>
+                                <a className="nav-link" href="#projects">Projeler</a>
                             </li>
                             <li className={`${styles.contact_us} nav-item`}>
-                                <a className={`${styles.contact_us_text} nav-link`} href="#myAlert" data-bs-toggle="collapse">Bize Ulaşın</a>
+                                <a className={`${styles.contact_us_text} nav-link`} href="#contact">Bize Ulaşın</a>
                             </li>
                         </ul>
                     </div>
