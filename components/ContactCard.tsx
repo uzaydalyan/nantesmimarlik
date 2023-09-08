@@ -6,10 +6,18 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import TwitterIcon from '@mui/icons-material/Twitter';
-import { TextField, Button } from '@mui/material';
-import { useEffect, useState } from 'react';
+import { TextField, Button, FormControl, FormHelperText } from '@mui/material';
+import { useEffect, useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
+import '../constants';
+import { EMAILJS_PUBLIC_KEY, EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID } from '../constants';
+import {Form} from  '../utilities/Form';
+import {FormFilter} from '../utilities/FormFilter';
 
 const ContactCard = () => {
+    
+    const errorText = "Alanı kontrol ediniz."
+    const form = useRef<HTMLFormElement>(null);
 
     const [name, setName] = useState("")
     const [surname, setSurname] = useState("")
@@ -23,22 +31,32 @@ const ContactCard = () => {
     const [phoneError, setPhoneError] = useState(false)
     const [messageError, setMessageError] = useState(false)
 
-    useEffect(() => {
-        console.log(name + " " + nameError)
-        console.log(surname + " " + surnameError)
-        console.log(email + " " + emailError)
-        console.log(phone + " " + phoneError)
-        console.log(message + " " + messageError)
-    })
     const handleSubmit = () => {
+        
+        let validityMap = FormFilter.getInstance().getValidityMap(new Form(
+            name,
+            surname,
+            email,
+            phone,
+            message
+        ))
 
-        setNameError(name == "")
-        setSurnameError(surname == "")
-        setEmailError(email == "")
-        setMessageError(message == "")
-        setPhoneError(phone == "")
+        setNameError(!validityMap.get("name"))
+        setSurnameError(!validityMap.get("surname"))
+        setEmailError(!validityMap.get("email"))
+        setMessageError(!validityMap.get("message"))
+        setPhoneError(!validityMap.get("phone"))
  
-        if(email && name && surname && phone && message){
+        if(validityMap.get("name") && validityMap.get("surname") && validityMap.get("email") && validityMap.get("phone") && validityMap.get("message")){
+
+            console.log("hello");
+
+            emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, form.current || "", EMAILJS_PUBLIC_KEY)
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
             
         } else{
             
@@ -83,18 +101,16 @@ const ContactCard = () => {
             </div>
             <div className={styles.form}>
                 <div className={styles.form_title}>Bize Ulaşın!</div>
-                <div className={styles.form_form}>
-
-                    <TextField id="name" label="İsminiz" variant="standard" required value={name} onChange={e => setName(e.target.value)} error={nameError} />
-                    <TextField id="surname" label="Soyisminiz" variant="standard" required value={surname} onChange={e => setSurname(e.target.value)} error={surnameError} />
-                    <TextField id="email" label="Email Adresiniz" variant="standard" required value={email} onChange={e => setEmail(e.target.value)} error={emailError} />
-                    <TextField id="phone_number" label="Telefon Numaranız" variant="standard" required value={phone} onChange={e => setPhone(e.target.value)}  error={phoneError} />
-                    <div className={styles.message}><TextField id="standard-basic" label="Mesaj" variant="standard" multiline rows={4} required value={message} onChange={e => setMessage(e.target.value)} error={messageError} /></div>
+                <form className={styles.form_form} ref={form}>
+                    <TextField name="name" id="name" label="İsminiz" variant="standard" required value={name} onChange={e => setName(e.target.value)} error={nameError} helperText={nameError && errorText} />
+                    <TextField name="surname" id="surname" label="Soyisminiz" variant="standard" required value={surname} onChange={e => setSurname(e.target.value)} error={surnameError} helperText={surnameError && errorText} />
+                    <TextField name="email" id="email" label="Email Adresiniz" variant="standard" required value={email} onChange={e => setEmail(e.target.value)} error={emailError} helperText={emailError && errorText} />
+                    <TextField name="phone" id="phone_number" label="Telefon Numaranız" variant="standard" required value={phone} onChange={e => setPhone(e.target.value)}  error={phoneError} helperText={phoneError && errorText} />
+                    <div className={styles.message}><TextField name="message" id="message" label="Mesaj" variant="standard" multiline rows={4} required value={message} onChange={e => setMessage(e.target.value)} error={messageError} helperText={messageError && errorText} /></div>
                     <div className={styles.button_bg}>
                         <div className={styles.button} onClick={handleSubmit} >Mesaj Yolla</div>
                     </div>
-
-                </div>
+                </form>
             </div>
         </div>
     );
