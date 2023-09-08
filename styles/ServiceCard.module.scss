@@ -7,16 +7,11 @@
     padding: 40px;
     border: 1px solid #E6D8CC;
     border-radius: 12px;
-    height: 368px;
-    align-content: end;
-
-    .image{
-        height: 120px;
-    }
+    height: 288px;
 
     .title{
         @include h2_desktop;
-        align-self: end;
+        align-items: center;
     }
 
     .description{

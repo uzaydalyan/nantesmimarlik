@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 
 
 // Colors
-$primary_color:#996830;
+$primary_color: #617A55;
 $primary_text_color: #444444;
 $secondary_text_color: #2C2C2C;
 $background_color: white;
 
 
 // Fonts
-$title_font: 'PlayFair Display';
+$title_font: 'Merriweather';
 $main_font: 'Outfit';
 $navbar_font: 'Poppins';
 
@@ -22,11 +22,12 @@ $mobile_width: 335px;
 @mixin h1_desktop {
     font-family: $title_font;
     color: $secondary_text_color;
-    font-size: 60px;
-    font-weight: 400;
+    font-size: 48px;
+    font-weight: 300;
     line-height: 72px;
     letter-spacing: -0.025em;
     margin: 0;
+
 }
 
 @mixin h1_mobile {
@@ -39,7 +40,7 @@ $mobile_width: 335px;
     font-family: $title_font;
     color: $secondary_text_color;
     font-size: 36px;
-    font-weight: 400;
+    font-weight: 300;
     line-height: 48px;
     letter-spacing: 0px;
     margin: 0;

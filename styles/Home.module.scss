@@ -21,17 +21,17 @@
 
 .hero {
   width: 100%;
-  margin-top: 80px;
 
   .hero_texts {
 
     width: $desktop_width;
     margin: 0 auto;
+    margin-top: 50px;
     margin-bottom: 75px;
 
     .title {
       @include h1_desktop;
-      font-size: 72px;
+      font-size: 60px;
       font-weight: 500;
       line-height: 96px;
       text-align: center;
@@ -65,8 +65,8 @@
 
   display: flex;
   width: $desktop_width;
-  height: 816px;
-  padding: 128px 0px;
+  height: 784px;
+  padding: 80px 0px;
   flex-direction: row;
   gap: 32px;
 
@@ -108,7 +108,7 @@
   flex-direction: column;
   gap: 24px;
   width: $desktop_width;
-  padding: 112px 0px;
+  padding: 80px 0px;
 
   .services_title {
     @include h1_desktop;
@@ -116,9 +116,7 @@
 
   .services_cards {
     margin-top: 56px;
-    display: flex;
-    flex-direction: row;
-    gap: 32px;
+    height: 340px;
   }
 }
 
@@ -127,7 +125,7 @@
   flex-direction: column;
   gap: 24px;
   width: $desktop_width;
-  padding: 112px 0px;
+  padding: 80px 0px;
 
   .projects_title {
     @include h1_desktop;
@@ -151,12 +149,19 @@
 
   .hero .hero_texts {
     width: $tablet_width;
+
+    .title {
+      font-size: 48px;
+      font-weight: 400;
+      line-height: 60px;
+    }
   }
 
   .about {
     width: $tablet_width;
     flex-direction: column;
     height: unset;
+    padding: 50px 0px;
 
     .about_images {
       height: 651px;
@@ -170,18 +175,17 @@
 
   .services {
     width: $tablet_width;
-    padding: 96px 0px;
+    padding: 50px 0px;
 
     .services_cards {
       margin-top: 16px;
-      flex-direction: column;
-      gap: 32px;
+      height: 395px;
     }
   }
 
   .projects {
     width: $tablet_width;
-    padding: 96px 0px;
+    padding: 50px 0px;
 
     .projects_cards {
       margin-top: 16px;
@@ -226,6 +230,10 @@
 
     .services_title {
       @include h1_mobile;
+    }
+
+    .services_cards {
+      height: 375px;
     }
   }
 
