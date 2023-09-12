@@ -72,7 +72,7 @@ const ContactCard = () => {
                 <div className={styles.info_addresses}>
                     <div className={styles.info_address}>
                         <PhoneInTalkIcon className={styles.info_icon} />
-                        <div className={styles.info_value}>+90 542 334 32 90</div>
+                        <div className={styles.info_value}>+90 532 120 12 01</div>
                     </div>
                     <div className={styles.info_address}>
                         <MailIcon className={styles.info_icon} />

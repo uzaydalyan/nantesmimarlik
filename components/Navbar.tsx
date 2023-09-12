@@ -1,11 +1,13 @@
 import styles from '../styles/Navbar.module.scss'
+import Image from 'next/image';
+import Logo from '../public/nantes_logo.svg';
 
 const Navbar = () => {
     return (
         <div className={styles.navbar}>
             <nav className={`${styles.navbar_content} navbar navbar-expand-md bg-white`}>
                 <div className="container-fluid">
-                    <a className={`${styles.logo} navbar-brand abs`} href="#">Nantes Mimarlık</a>
+                    <a className={`${styles.logo} navbar-brand abs`} href="#"><Image width="295" src={Logo} alt="logo"  /></a>
                     <button className="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNavbar">
                         <span className="navbar-toggler-icon"></span>
                     </button>

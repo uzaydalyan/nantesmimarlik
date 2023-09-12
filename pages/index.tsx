@@ -80,32 +80,38 @@ const Home: NextPage = () => {
               <SwiperSlide>
                 <ServiceCard title='Mimarlık'
                   className='service_card'
-                  description='Non diam pretium tristique augue placerat dolor. Accumsan nibh nunc, molestie volutpat ipsum, ultricies.'
+                  description='Hayallerinizi gerçeğe dönüştürmek için profesyonel mimarlık hizmetleri'
                 /></SwiperSlide>
 
 
               <SwiperSlide>
                 <ServiceCard title='İç Mimarlık'
                   className='service_card'
-                  description='Non diam pretium tristique augue placerat dolor. Accumsan nibh nunc, molestie volutpat ipsum, ultricies.'
+                  description='İç mekanlarınızda estetik ve işlevselliği optimize eden tasarım dokunuşları'
+                /></SwiperSlide>
+
+<SwiperSlide>
+                <ServiceCard title='İnşaat & Cephe Tasarımı'
+                  className='service_card'
+                  description='Binaların dış görünüşünü ve cephe malzemelerini planlama, tasarlama hizmetleri'
                 /></SwiperSlide>
 
               <SwiperSlide>
                 <ServiceCard title='Çelik Konstriksiyon'
                   className='service_card'
-                  description='Non diam pretium tristique augue placerat dolor. Accumsan nibh nunc, molestie volutpat ipsum, ultricies.'
+                  description='Çelik yapı malzemesi ile güvenilir dayanıklılık ve estetiğin birleşimi'
                 /></SwiperSlide>
 
               <SwiperSlide>
                 <ServiceCard title='Prefabrik Uygulamaları'
                   className='service_card'
-                  description='Non diam pretium tristique augue placerat dolor. Accumsan nibh nunc, molestie volutpat ipsum, ultricies.'
+                  description='Hızlı, ekonomik ve çevre dostu prefabrik yapı çözümleri'
                 /></SwiperSlide>
 
               <SwiperSlide>
-                <ServiceCard title='Render 3D Görselleştirme'
+                <ServiceCard title='Render (3D Görselleştirme)'
                   className='service_card'
-                  description='Non diam pretium tristique augue placerat dolor. Accumsan nibh nunc, molestie volutpat ipsum, ultricies.'
+                  description='Bilgisayar destekli tasarım programları kullanarak 3D modelleme hizmetleri'
                 /></SwiperSlide>
             </Swiper>
 
@@ -116,8 +122,8 @@ const Home: NextPage = () => {
           <PointedSmallTitle title='Projeler' />
           <h1 className={styles.projects_title}>Bazı örnek projeler..</h1>
           <div className={styles.projects_cards}>
-            <ProjectCard imgSource={'https://firebasestorage.googleapis.com/v0/b/nantesmimarlik-1af03.appspot.com/o/villa.png?alt=media&token=1558f1fa-5185-41f4-8c40-e5e4ac1e362a'}
-              title={'Villa'}
+            <ProjectCard imgSource={'https://firebasestorage.googleapis.com/v0/b/nantesmimarlik-1af03.appspot.com/o/besiktas_residence.png?alt=media&token=bab2aff4-54f8-49b6-b137-257bfca24e20'}
+              title={'Beşiktaş Residence'}
               description={'Geniş iç ve dış mekanlarımız, modern tasarım anlayışı ve benzersiz detaylarla dolu. Villa yaşamının tadını çıkarın.'} />
 
             <ProjectCard imgSource={'https://firebasestorage.googleapis.com/v0/b/nantesmimarlik-1af03.appspot.com/o/mustakil.png?alt=media&token=04241852-e0fe-47aa-a286-34c6bafd9883'}
