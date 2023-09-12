@@ -31,7 +31,7 @@ const Home: NextPage = () => {
       <main className={styles.main}>
         <div className={styles.hero}>
           <div className={styles.image}>
-            <Image alt="Nantes Mimarlık" src="https://firebasestorage.googleapis.com/v0/b/nantesmimarlik-1af03.appspot.com/o/banner_image.png?alt=media&token=0a4e18a6-b9d0-44af-98fd-48fa0d074fb0" width={1440} height={640} />
+            <Image alt="Nantes Mimarlık" src="https://firebasestorage.googleapis.com/v0/b/nantesmimarlik-1af03.appspot.com/o/banner_image_new.png?alt=media&token=8386b947-e21f-4eea-aea9-b21c89de6166" width={1440} height={640} />
           </div>
           <div className={styles.hero_texts}>
             <h1 className={styles.title}>Yaşam Alanlarınızda Fonksiyonel ve Estetik Çözümler</h1>
@@ -116,17 +116,17 @@ const Home: NextPage = () => {
           <PointedSmallTitle title='Projeler' />
           <h1 className={styles.projects_title}>Bazı örnek projeler..</h1>
           <div className={styles.projects_cards}>
-            <ProjectCard imgSource={'https://firebasestorage.googleapis.com/v0/b/nantesmimarlik-1af03.appspot.com/o/project.png?alt=media&token=eb2a14bb-b468-455e-937b-8ca8f9950f11'}
-              title={'Villa B'}
-              description={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus fringilla dui amet faucibus nam. Erat id laoreet posuere etiam morbi.'} />
+            <ProjectCard imgSource={'https://firebasestorage.googleapis.com/v0/b/nantesmimarlik-1af03.appspot.com/o/villa.png?alt=media&token=1558f1fa-5185-41f4-8c40-e5e4ac1e362a'}
+              title={'Villa'}
+              description={'Geniş iç ve dış mekanlarımız, modern tasarım anlayışı ve benzersiz detaylarla dolu. Villa yaşamının tadını çıkarın.'} />
 
-            <ProjectCard imgSource={'https://firebasestorage.googleapis.com/v0/b/nantesmimarlik-1af03.appspot.com/o/project.png?alt=media&token=eb2a14bb-b468-455e-937b-8ca8f9950f11'}
-              title={'Villa B'}
-              description={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus fringilla dui amet faucibus nam. Erat id laoreet posuere etiam morbi.'} />
+            <ProjectCard imgSource={'https://firebasestorage.googleapis.com/v0/b/nantesmimarlik-1af03.appspot.com/o/mustakil.png?alt=media&token=04241852-e0fe-47aa-a286-34c6bafd9883'}
+              title={'Müstakil Ev'}
+              description={'Konfor ve sessizliği aynı anda sunan müstakil ev konseptimiz, sizlere rüya gibi bir yaşamın kapılarını aralıyor.'} />
 
-            <ProjectCard imgSource={'https://firebasestorage.googleapis.com/v0/b/nantesmimarlik-1af03.appspot.com/o/project.png?alt=media&token=eb2a14bb-b468-455e-937b-8ca8f9950f11'}
-              title={'Villa B'}
-              description={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus fringilla dui amet faucibus nam. Erat id laoreet posuere etiam morbi.'} />
+            <ProjectCard imgSource={'https://firebasestorage.googleapis.com/v0/b/nantesmimarlik-1af03.appspot.com/o/icmekan.png?alt=media&token=4a809333-15fb-4ecc-8bff-dea30513bd4e'}
+              title={'İç Mekan'}
+              description={'Geniş iç ve dış mekanlarımız, modern tasarım anlayışı ve benzersiz detaylarla dolu. Villa yaşamının tadını çıkarın.'} />
           </div>
         </div>
         <div className={styles.contact_bg} id="contact">
