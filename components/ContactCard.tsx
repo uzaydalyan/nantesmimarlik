@@ -80,11 +80,11 @@ const ContactCard = () => {
                 <div className={styles.info_addresses}>
                     <div className={styles.info_address}>
                         <PhoneInTalkIcon className={styles.info_icon} />
-                        <div className={styles.info_value}>+90 532 120 12 01</div>
+                        <a className={styles.info_value} href='tel:905321201201'>+90 532 120 12 01</a>
                     </div>
                     <div className={styles.info_address}>
                         <MailIcon className={styles.info_icon} />
-                        <div className={styles.info_value}>nantesmimarlik@gmail.com</div>
+                        <a className={styles.info_value} href='mailto:nantesmimarlik@gmail.com'>nantesmimarlik@gmail.com</a>
                     </div>
                     <div className={styles.info_address}>
                         <PlaceIcon className={styles.info_icon} />

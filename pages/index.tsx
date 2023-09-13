@@ -21,8 +21,14 @@ const Home: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Nantes Mimarlık</title>
-        <meta name="description" content="Nantes Mimarlık" />
+        <title>Nantes Mimarlık| Mimarlık Hizmeti | Hatay Mimarlık</title>
+        <meta name="description" content="Antakya Hatay'da bulunan firmamız, her türlü mimarlık ihtiyacınız için hizmet vermektedir. Modern tasarım, inşaat yönetimi ve daha fazlası için bize ulaşın." />
+        <meta name="keywords" content="Antakya, Hatay, Mimarlık, Mimarlık Hizmetleri, İnşaat Yönetimi, Mimarlık Tasarımı, İç Mekan Tasarımı, Proje Danışmanlığı, İnşaat, Cephe Tasarımı, Prefabrik Uygulamaları, Render, 3D Görselleştirme" />
+        <meta name="geo.placename" content="Antakya, Hatay, İstanbul, Türkiye" />
+        <meta name="service.focus" content="İç ve Dış Mekan Mimarlık Hizmeti" />
+        <meta name="contact.phone" content="+90 532 120 12 01" />
+        <meta name="contact.email" content="nantesmimarlik@gmail.com" />
+        <meta name="usp" content="Deneyimli ve Profesyonel Mimarlık Hizmetleri" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -42,7 +48,7 @@ const Home: NextPage = () => {
         <div className={styles.about} id="about">
           <div className={styles.about_texts}>
             <PointedSmallTitle title='Hakkımızda' />
-            <div className={styles.about_title}>Bizi Anlatan 3 Değer:<br/><h2><br/>Güven & Konfor  & Estetik</h2></div>
+            <div className={styles.about_title}>Bizi Anlatan 3 Değer:<br /><h2><br />Güven & Konfor  & Estetik</h2></div>
             <p className={styles.about_description}>Mimar Tolga Bayramoğlu önderliğinde kurulan markamız; Mimarlık, İç Mimarlık, İnşaat, Cephe Tasarımı alanlarında hizmet vermektedir.
               Tolga Bayramoğlu, 2022 yılında Bahçeşehir Üniversitesi Mimarlık Fakültesi İngilizce Program’dan mezun olmuştur. Yüksek konut projelerinde şantiye alanında, özel konut ve ofis projelerinde iç mimarlık uygulamaları alanında deneyime sahip olması ile beraber mermer, kaplama ve doğal taş uygulamaları alanında da çalışmıştır.
               Sektörde kazandığı deneyimleri uygulamak adına Hatay ve İstanbul’da hizmet vermektedir.<br /><br />NANTES Mimarlık, fonksiyonel ve estetik tasarımlarımızla müşterilerimizin hayallerini gerçeğe dönüştürmek için varız. Mimari tasarımın gücünü kullanarak, insanların yaşam alanlarındaki deneyimlerini zenginleştirmek, toplumumuza katkıda bulunmak ve çevreye saygı göstermek için çalışıyoruz.</p>
@@ -90,7 +96,7 @@ const Home: NextPage = () => {
                   description='İç mekanlarınızda estetik ve işlevselliği optimize eden tasarım dokunuşları'
                 /></SwiperSlide>
 
-<SwiperSlide>
+              <SwiperSlide>
                 <ServiceCard title='İnşaat & Cephe Tasarımı'
                   className='service_card'
                   description='Binaların dış görünüşünü ve cephe malzemelerini planlama, tasarlama hizmetleri'
@@ -124,7 +130,7 @@ const Home: NextPage = () => {
           <div className={styles.projects_cards}>
             <ProjectCard imgSource={'https://firebasestorage.googleapis.com/v0/b/nantesmimarlik-1af03.appspot.com/o/besiktas_residence.png?alt=media&token=bab2aff4-54f8-49b6-b137-257bfca24e20'}
               title={'Beşiktaş Residence'}
-              description={'Geniş iç ve dış mekanlarımız, modern tasarım anlayışı ve benzersiz detaylarla dolu. Villa yaşamının tadını çıkarın.'} />
+              description={'Modern tasarım anlayışıyla inşa edilen rezidans dairemiz, lüksü ve konforu bir araya getiriyor.'} />
 
             <ProjectCard imgSource={'https://firebasestorage.googleapis.com/v0/b/nantesmimarlik-1af03.appspot.com/o/mustakil.png?alt=media&token=04241852-e0fe-47aa-a286-34c6bafd9883'}
               title={'Müstakil Ev'}
