@@ -22,33 +22,33 @@ $mobile_width: 335px;
 @mixin h1_desktop {
     font-family: $title_font;
     color: $secondary_text_color;
-    font-size: 48px;
-    font-weight: 300;
-    line-height: 72px;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 36px;
     letter-spacing: -0.025em;
     margin: 0;
 
 }
 
 @mixin h1_mobile {
-    font-size: 36px;
-    line-height: 48px;
+    font-size: 24px;
+    line-height: 36px;
     letter-spacing: 0px;
 }
 
 @mixin h2_desktop {
     font-family: $title_font;
     color: $secondary_text_color;
-    font-size: 36px;
-    font-weight: 300;
-    line-height: 48px;
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 36px;
     letter-spacing: 0px;
     margin: 0;
 }
 
 @mixin h2_mobile {
-    font-size: 30px;
-    line-height: 40px;
+    font-size: 20px;
+    line-height: 30px;
 }
 
 @mixin p_desktop {
