@@ -2,20 +2,18 @@ import styles from '../styles/ContactCard.module.scss';
 import PhoneInTalkIcon from '@mui/icons-material/PhoneInTalk';
 import PlaceIcon from '@mui/icons-material/Place';
 import MailIcon from '@mui/icons-material/Mail';
+import { Close } from '@mui/icons-material';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import YouTubeIcon from '@mui/icons-material/YouTube';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import { TextField, Button, FormControl, FormHelperText } from '@mui/material';
+import { TextField, Alert, IconButton, Collapse } from '@mui/material';
 import { useEffect, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import '../constants';
 import { EMAILJS_PUBLIC_KEY, EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID } from '../constants';
-import {Form} from  '../utilities/Form';
-import {FormFilter} from '../utilities/FormFilter';
+import { Form } from '../utilities/Form';
+import { FormFilter } from '../utilities/FormFilter';
 
 const ContactCard = () => {
-    
+
     const errorText = "Alanı kontrol ediniz."
     const form = useRef<HTMLFormElement>(null);
 
@@ -31,8 +29,12 @@ const ContactCard = () => {
     const [phoneError, setPhoneError] = useState(false)
     const [messageError, setMessageError] = useState(false)
 
+    const [formResultText, setFormResultText] = useState("");
+    const [formSuccess, setFormSuccess] = useState(false);
+    const [formResultTextOpen, setFormResultTextOpen] = useState(false);
+
     const handleSubmit = () => {
-        
+
         let validityMap = FormFilter.getInstance().getValidityMap(new Form(
             name,
             surname,
@@ -46,20 +48,26 @@ const ContactCard = () => {
         setEmailError(!validityMap.get("email"))
         setMessageError(!validityMap.get("message"))
         setPhoneError(!validityMap.get("phone"))
- 
-        if(validityMap.get("name") && validityMap.get("surname") && validityMap.get("email") && validityMap.get("phone") && validityMap.get("message")){
+
+        if (validityMap.get("name") && validityMap.get("surname") && validityMap.get("email") && validityMap.get("phone") && validityMap.get("message")) {
 
             console.log("hello");
 
             emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, form.current || "", EMAILJS_PUBLIC_KEY)
-            .then((result) => {
-                console.log(result.text);
-            }, (error) => {
-                console.log(error.text);
-            });
-            
-        } else{
-            
+                .then((result) => {
+                    console.log(result.text);
+                    setFormSuccess(true)
+                    setFormResultText("Mesajınız alındı, teşekkürler.")
+                    setFormResultTextOpen(true)
+                    
+                }, (error) => {
+                    setFormSuccess(false)
+                    setFormResultText("Bir hata oluştu, tekrar deneyiniz.")
+                    setFormResultTextOpen(true)
+                });
+
+        } else {
+
         }
     }
 
@@ -76,27 +84,22 @@ const ContactCard = () => {
                     </div>
                     <div className={styles.info_address}>
                         <MailIcon className={styles.info_icon} />
-                        <div className={styles.info_value}>info@gmail.com</div>
+                        <div className={styles.info_value}>nantesmimarlik@gmail.com</div>
                     </div>
                     <div className={styles.info_address}>
                         <PlaceIcon className={styles.info_icon} />
-                        <div className={styles.info_value}>Antakya, Hatay</div>
+                        <div className={styles.info_value}>General Şükrü Kanatlı Mahallesi, Atatürk Caddesi, Millet Behçesi, no: 84 Antakya/Hatay</div>
+                    </div>
+                    <div className={styles.info_address}>
+                        <PlaceIcon className={styles.info_icon} />
+                        <div className={styles.info_value}>Cihannüma mahallesi, Beşiktaş/İstanbul</div>
                     </div>
                 </div>
 
                 <div className={styles.social}>
-                    <div className={styles.icon}>
+                    <a className={styles.icon} href='https://www.instagram.com/nantesmimarlik/'>
                         <InstagramIcon />
-                    </div>
-                    <div className={styles.icon}>
-                        <FacebookIcon />
-                    </div>
-                    <div className={styles.icon}>
-                        <YouTubeIcon />
-                    </div>
-                    <div className={styles.icon}>
-                        <TwitterIcon />
-                    </div>
+                    </a>
                 </div>
             </div>
             <div className={styles.form}>
@@ -105,9 +108,29 @@ const ContactCard = () => {
                     <TextField name="name" id="name" label="İsminiz" variant="standard" required value={name} onChange={e => setName(e.target.value)} error={nameError} helperText={nameError && errorText} />
                     <TextField name="surname" id="surname" label="Soyisminiz" variant="standard" required value={surname} onChange={e => setSurname(e.target.value)} error={surnameError} helperText={surnameError && errorText} />
                     <TextField name="email" id="email" label="Email Adresiniz" variant="standard" required value={email} onChange={e => setEmail(e.target.value)} error={emailError} helperText={emailError && errorText} />
-                    <TextField name="phone" id="phone_number" label="Telefon Numaranız" variant="standard" required value={phone} onChange={e => setPhone(e.target.value)}  error={phoneError} helperText={phoneError && errorText} />
+                    <TextField name="phone" id="phone_number" label="Telefon Numaranız" variant="standard" required value={phone} onChange={e => setPhone(e.target.value)} error={phoneError} helperText={phoneError && errorText} />
                     <div className={styles.message}><TextField name="message" id="message" label="Mesaj" variant="standard" multiline rows={4} required value={message} onChange={e => setMessage(e.target.value)} error={messageError} helperText={messageError && errorText} /></div>
                     <div className={styles.button_bg}>
+                        <Collapse in={formResultTextOpen}>
+                            <Alert
+                                severity={formSuccess ? 'success' : 'error'}
+                                action={
+                                    <IconButton
+                                        aria-label="close"
+                                        color="inherit"
+                                        size="small"
+                                        onClick={() => {
+                                            setFormResultTextOpen(false)
+                                        }}
+                                    >
+                                        <Close fontSize="inherit" />
+                                    </IconButton>
+                                }
+                                sx={{ mb: 2 }}
+                            >
+                                {formResultText}
+                            </Alert>
+                        </Collapse>
                         <div className={styles.button} onClick={handleSubmit} >Mesaj Yolla</div>
                     </div>
                 </form>
