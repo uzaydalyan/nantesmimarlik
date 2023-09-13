@@ -26,6 +26,16 @@ a {
 .navbar-collapse {
   background-color: $background_color;
   border-radius: 8px;
+
+  @media(max-width: 767px){
+    padding-bottom: 30px;
+  }
+}
+
+@media(max-width: 767px){
+  .navbar-nav{
+    gap:10px;
+  }
 }
 
 .nav-item {
