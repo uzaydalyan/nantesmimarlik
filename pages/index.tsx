@@ -21,7 +21,7 @@ const Home: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Nantes Mimarlık| Mimarlık Hizmeti | Hatay Mimarlık</title>
+        <title>Nantes Mimarlık | Mimarlık Hizmeti | Hatay Mimarlık</title>
         <meta name="description" content="Antakya Hatay'da bulunan firmamız, her türlü mimarlık ihtiyacınız için hizmet vermektedir. Modern tasarım, inşaat yönetimi ve daha fazlası için bize ulaşın." />
         <meta name="keywords" content="Antakya, Hatay, Mimarlık, Mimarlık Hizmetleri, İnşaat Yönetimi, Mimarlık Tasarımı, İç Mekan Tasarımı, Proje Danışmanlığı, İnşaat, Cephe Tasarımı, Prefabrik Uygulamaları, Render, 3D Görselleştirme" />
         <meta name="geo.placename" content="Antakya, Hatay, İstanbul, Türkiye" />
@@ -29,6 +29,7 @@ const Home: NextPage = () => {
         <meta name="contact.phone" content="+90 532 120 12 01" />
         <meta name="contact.email" content="nantesmimarlik@gmail.com" />
         <meta name="usp" content="Deneyimli ve Profesyonel Mimarlık Hizmetleri" />
+        <meta name="google-site-verification" content="MbFCGB-AsuNETNB3-noVw0yoOiygbxOJ0kBmARZN9sM" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -103,7 +104,7 @@ const Home: NextPage = () => {
                 /></SwiperSlide>
 
               <SwiperSlide>
-                <ServiceCard title='Çelik Konstriksiyon'
+                <ServiceCard title='Çelik Konstrüksiyon'
                   className='service_card'
                   description='Çelik yapı malzemesi ile güvenilir dayanıklılık ve estetiğin birleşimi'
                 /></SwiperSlide>
@@ -126,7 +127,7 @@ const Home: NextPage = () => {
 
         <div className={styles.projects} id="projects">
           <PointedSmallTitle title='Projeler' />
-          <h1 className={styles.projects_title}>Bazı örnek projeler..</h1>
+          <h1 className={styles.projects_title}>Projelerimiz</h1>
           <div className={styles.projects_cards}>
             <ProjectCard imgSource={'https://firebasestorage.googleapis.com/v0/b/nantesmimarlik-1af03.appspot.com/o/besiktas_residence.png?alt=media&token=bab2aff4-54f8-49b6-b137-257bfca24e20'}
               title={'Beşiktaş Residence'}
