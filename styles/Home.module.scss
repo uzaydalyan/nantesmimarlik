@@ -101,15 +101,16 @@
   flex-direction: column;
   gap: 24px;
   width: $desktop_width;
-  padding: 80px 0px;
+  padding: 80px 0 40px 0;
 
   .services_title {
     @include h1_desktop;
   }
 
   .services_cards {
-    margin-top: 56px;
+    margin-top: 30px;
     height: 340px;
+    padding: 20px;
   }
 }
 

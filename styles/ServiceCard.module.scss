@@ -3,11 +3,12 @@
 .main{
     display: grid;
     width: 100%;
-    gap: 16px;
-    padding: 40px;
-    border: 1px solid #E6D8CC;
+    padding: 30px;
+    gap: 20px;
+    box-shadow: 0px 0px 10px 0px #0000001A;
     border-radius: 12px;
-    height: 288px;
+    grid-template-rows: 3fr 8fr;
+    height: 200px;
 
     .title{
         @include h2_desktop;
@@ -16,22 +17,32 @@
 
     .description{
         @include p_desktop;
-        align-self: end;
+        align-self: start;
     }
 }
 
 @media(max-width: $desktop_width){
 
     .main{
-        height: 336px;
+        height: 295px;
+        grid-template-rows: 2fr 3fr;
+        padding: 25px;
+
+        .title{
+            align-self: center;
+        }
+
+        .description{
+            align-self: start;
+        }
     }
 }
 
 @media(max-width: $tablet_width){
 
     .main{
-        height: 320px;
-        padding: 32px;
+        height: 280px;
+        padding: 25px;
 
         .image{
             height: 64px;

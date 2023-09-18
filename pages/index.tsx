@@ -72,7 +72,7 @@ const Home: NextPage = () => {
             <Swiper
               modules={[Navigation, Pagination, Scrollbar, A11y]}
               pagination={{ clickable: true }}
-              spaceBetween={50}
+              spaceBetween={20}
               slidesPerView={1}
 
               breakpoints={{
@@ -98,7 +98,7 @@ const Home: NextPage = () => {
                 /></SwiperSlide>
 
               <SwiperSlide>
-                <ServiceCard title='İnşaat & Cephe Tasarımı'
+                <ServiceCard title='İnşaat&Cephe Tasarımı'
                   className='service_card'
                   description='Binaların dış görünüşünü ve cephe malzemelerini planlama, tasarlama hizmetleri'
                 /></SwiperSlide>
@@ -116,7 +116,7 @@ const Home: NextPage = () => {
                 /></SwiperSlide>
 
               <SwiperSlide>
-                <ServiceCard title='Render (3D Görselleştirme)'
+                <ServiceCard title='3D Görselleştirme'
                   className='service_card'
                   description='Bilgisayar destekli tasarım programları kullanarak 3D modelleme hizmetleri'
                 /></SwiperSlide>
@@ -129,7 +129,7 @@ const Home: NextPage = () => {
           <PointedSmallTitle title='Projeler' />
           <h1 className={styles.projects_title}>Projelerimiz</h1>
           <div className={styles.projects_cards}>
-            <ProjectCard imgSource={'https://firebasestorage.googleapis.com/v0/b/nantesmimarlik-1af03.appspot.com/o/besiktas_residence.png?alt=media&token=bab2aff4-54f8-49b6-b137-257bfca24e20'}
+            <ProjectCard imgSource={'https://firebasestorage.googleapis.com/v0/b/nantesmimarlik-1af03.appspot.com/o/besiktasresidence.png?alt=media&token=4f2c7347-9a72-4492-8765-da0f21b88171'}
               title={'Beşiktaş Residence'}
               description={'Modern tasarım anlayışıyla inşa edilen rezidans dairemiz, lüksü ve konforu bir araya getiriyor.'} />
 

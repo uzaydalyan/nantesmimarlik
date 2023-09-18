@@ -23,12 +23,24 @@ a {
   -webkit-text-decoration: none;
 }
 
+.navbar-brand{
+
+  margin-bottom: 20px;
+
+  @media(max-width: $desktop_width) {
+
+    margin-bottom: 10px;
+  }
+}
+
 .navbar-collapse {
   background-color: $background_color;
   border-radius: 8px;
+  margin-top: 7px;
 
   @media(max-width: 767px){
     padding-bottom: 30px;
+    margin-top: 0px;
   }
 }
 
@@ -61,6 +73,11 @@ a {
   letter-spacing: 0em;
   text-align: center;
 
+  @media(max-width: $desktop_width) {
+
+    font-size: 14px !important;
+  }
+
 }
 
 footer {
@@ -80,9 +97,18 @@ footer {
 
 .services_swiper_parent{
 
+  .swiper{
+    padding: 10px;
+  }
+
   .swiper-pagination{
 
-    bottom: -5px !important;
+    bottom: 20px !important;
+
+    @media(max-width: $desktop_width) {
+
+      bottom: 0px !important;
+    }
   }
 }
 

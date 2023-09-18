@@ -88,18 +88,16 @@ const ContactCard = () => {
                     </div>
                     <div className={styles.info_address}>
                         <PlaceIcon className={styles.info_icon} />
-                        <div className={styles.info_value}>General Şükrü Kanatlı Mahallesi, Atatürk Caddesi, Millet Behçesi, no: 84 Antakya/Hatay</div>
+                        <div className={styles.info_value}>General Şükrü Kanatlı Mahallesi, Atatürk Caddesi, Millet Bahçesi, No: 84 Antakya/Hatay</div>
                     </div>
                     <div className={styles.info_address}>
                         <PlaceIcon className={styles.info_icon} />
-                        <div className={styles.info_value}>Cihannüma mahallesi, Beşiktaş/İstanbul</div>
+                        <div className={styles.info_value}>Cihannüma Mahallesi, Beşiktaş/İstanbul</div>
                     </div>
-                </div>
-
-                <div className={styles.social}>
-                    <a className={styles.icon} href='https://www.instagram.com/nantesmimarlik/'>
-                        <InstagramIcon />
-                    </a>
+                    <div className={styles.info_address}>
+                        <InstagramIcon className={styles.info_icon} />
+                        <a href='https://www.instagram.com/nantesmimarlik/' className={styles.info_value}>instagram.com/nantesmimarlik/</a>
+                    </div>
                 </div>
             </div>
             <div className={styles.form}>
